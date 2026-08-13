@@ -5,6 +5,7 @@ public class GroundCheck : MonoBehaviour
     public bool isGround;
     private void OnTriggerEnter2D(Collider2D colission)
     {
+       isGround = true;
         Debug.Log("Me tocaron!!");
     }
     private void OnTriggerExit2D(Collider2D colission)
