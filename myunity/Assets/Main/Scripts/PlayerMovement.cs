@@ -17,10 +17,11 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
 
-              _rigidbody2D.AddForce(Vector2.up * _jumpForce);
+                _rigidbody2D.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);// tipo de fuerza impulso
+
                 Debug.Log("Oprimi la tecla");
             }
-        }   
-        _rigidbody2D.linearVelocity = Vector2.right * _movementSpeed;
+        }
+        _rigidbody2D.linearVelocity = new Vector2(1 * _movementSpeed, _rigidbody2D.linearVelocity.y);// multiplicar solo por 1    }
     }
-}   
+}
