@@ -2,35 +2,18 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private float puntosVida = 100f;
+    [SerializeField] private float _puntosVida = 100f;
     public void RestarVida(int daño)
     {
-        _puntosVida = _puntosVida - 10f;
-
-        //+ suma
-        //- resta
-        // / división
-        // * multiplicación
-
-        // = asignar
-        // == comparar
-        // ! diferente
-        // && y 
-        // || o
-
-        // !=
-        // -=
-        // +=
-        // ++ sumar 1
-        // -- restar 1
-
-
-
-
-
-
-
-
-
-        a
+        _puntosVida = _puntosVida - daño;
+        _puntosVida -= daño;
     }
+
+
+    public void SumarVida(int Curacion)
+    {
+        _puntosVida = _puntosVida + Curacion;
+      _puntosVida += Curacion;
+     }
+
+}
