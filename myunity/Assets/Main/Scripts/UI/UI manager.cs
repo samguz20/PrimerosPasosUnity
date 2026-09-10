@@ -3,17 +3,17 @@ using UnityEngine.UI;
 
 public class UImanager : MonoBehaviour
 {
-    [SerializeField] private Image barra;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Image _barra;
+    
+    public void SumarFillAmount(float amount)   
     {
-        barra.color = Color.cyan;
-        barra.fillAmount = 0.5f; 
+        _barra.fillAmount += amount;
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public void RestarFillAmount(float amount) 
     {
-        
+        _barra.fillAmount = _barra.fillAmount - amount;
     }
 }

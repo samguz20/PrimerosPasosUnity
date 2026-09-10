@@ -4,11 +4,17 @@ public class Heal : MonoBehaviour
 {
     
     [SerializeField] private PlayerStats _playerStats;
-    private void OnCollisionEnter2D(Collision2D collision)
+    [SerializeField] private UImanager _uiManager;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             _playerStats.SumarVida(10);
+            _uiManager.SumarFillAmount(0.1f);
+            Destroy(this.gameObject);
         }
     }
+
+
 }
