@@ -2314,6 +2314,7 @@ GameObject:
   - component: {fileID: 335038742}
   - component: {fileID: 335038741}
   - component: {fileID: 335038744}
+  - component: {fileID: 335038745}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2388,12 +2389,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335038739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.1258411, y: 1.6541164, z: -9.8289795}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1820277248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &335038744
 MonoBehaviour:
@@ -2439,6 +2440,19 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &335038745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335038739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd767d8250435d4a9fb483449a3af97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  _target: {fileID: 1067219683}
 --- !u!1 &349835615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6462,9 +6476,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1066212957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 761cb82dd6d71c3409d6eb62e3093525, type: 3}
+  m_Script: {fileID: 11500000, guid: ffa6b15b011304c4b9f53e9aab063395, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrampaMortal
+  _playerStats: {fileID: 1067219686}
 --- !u!1 &1067219677
 GameObject:
   m_ObjectHideFlags: 0
@@ -6676,7 +6691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e92b754d1edb54da66c58250c3bd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  _puntosVida: 100
+  _puntosVidaActuales: 100
+  _puntosVidaMaximo: 100
+  _uiManager: {fileID: 0}
 --- !u!1 &1067410911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6888,7 +6905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcdd6c5d18f6db14881f8aa0b5fa7e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  barra: {fileID: 464488559}
+  _barra: {fileID: 0}
 --- !u!4 &1127337812
 Transform:
   m_ObjectHideFlags: 0
@@ -7517,7 +7534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805f0f6975323ad4c937deb07304ea62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Heal
-  _playerStats: {fileID: 0}
+  _playerStats: {fileID: 1067219686}
+  _uiManager: {fileID: 1127337811}
 --- !u!1 &1297813444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10457,6 +10475,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 335038743}
   - {fileID: 1067219683}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12234,7 +12253,6 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 335038743}
   - {fileID: 1820277248}
   - {fileID: 324377465}
   - {fileID: 1215078279}
