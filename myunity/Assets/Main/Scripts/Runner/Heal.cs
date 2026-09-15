@@ -4,7 +4,7 @@ public class Heal : MonoBehaviour
 {
     
     [SerializeField] private PlayerStats _playerStats;
-    [SerializeField] private UImanager _uiManager;
+    [SerializeField] private UIManager _uiManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
