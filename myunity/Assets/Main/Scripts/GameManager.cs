@@ -8,7 +8,15 @@ public class GameManager: MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
-
+    public void SalirJuego()
+    {
+        Application.Quit();
+    }
+    
+    public void PausarElJuego()
+    {
+        Time.timeScale = 0;
+    }
     // Update is called once per frame
     void Update()
     {
