@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager: MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void CargarEscena(int scene)
@@ -12,12 +12,22 @@ public class GameManager: MonoBehaviour
     {
         Application.Quit();
     }
-    
+
     public void PausarElJuego()
     {
         Time.timeScale = 0;
     }
-    // Update is called once per frame
+    
+    public void ReanudarElJuego()
+    {
+        Time.timeScale = 1;
+    }
+
+    public void ReiniciarELJuego()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     void Update()
     {
         
