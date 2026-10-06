@@ -10,8 +10,8 @@ public class Heal : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            _playerStats.SumarVida(10);
-            _uiManager.SumarFillAmount(0.1f);
+            _playerStats.SumarVida(5);
+            _uiManager.SumarFillAmount(0.5f);
             Destroy(this.gameObject);
         }
     }

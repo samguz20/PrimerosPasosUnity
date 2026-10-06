@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     }
     public void RestarFillAmount(float amount)
     {
-        _barra.fillAmount = _barra.fillAmount - amount;
+        _barra.fillAmount -= amount;
     }
 
 

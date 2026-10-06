@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -49,7 +50,11 @@ public class PlayerStats : MonoBehaviour
    
     }
 
-
-
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Cloud B (26)")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu principal");
+        }
+    }
 }
