@@ -6,8 +6,6 @@ public class GameManager : MonoBehaviour
     public void CargarEscena(int scene)
     {
         SceneManager.LoadScene(scene);
-    
-            
    
     }
 
@@ -32,7 +30,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-
 
 }

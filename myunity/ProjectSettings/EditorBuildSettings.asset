@@ -13,7 +13,13 @@ EditorBuildSettings:
     guid: 0a851eaa2628fe6418360caddf31a7c0
   - enabled: 1
     path: Assets/Main/Scenes/Menu principal.unity
-    guid: ffd6faa015c23114d8ad7c7468d62b43
+    guid: 2862274351cc8274fb7b599e9b036d1c
+  - enabled: 1
+    path: Assets/Main/Scenes/PANEL GANAR.unity
+    guid: 31087e9d7863dac4b81be45a81a6102a
+  - enabled: 1
+    path: Assets/Main/Scenes/PANEL PERDER.unity
+    guid: 438c9514281ece245baa96b458f3c610
   - enabled: 0
     path: Assets/Main/MainMenu.unity
     guid: bfa4f9f8b24c28e49bc99c85dc3c32b1

@@ -1,4 +1,5 @@
 
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -18,9 +19,10 @@ public class PlayerStats : MonoBehaviour
     }
 
     private void Update()
-    {   Debug.Log("playerstats");
+    {
+        Debug.Log("playerstats");
         if (_puntosVidaActuales >= 88)
-        {  
+        {
             _uiManager.ColorBarra(Color.green);
             Debug.Log("verde");
         }
@@ -29,32 +31,26 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.Log("amarillo");
             _uiManager.ColorBarra(new Color(245f, 73f, 39f, 255f));
-        }  
-        
+        }
+
         if (_puntosVidaActuales < 40)
         {
             Debug.Log("rojo");
             _uiManager.ColorBarra(new Color(189f, 15f, 15f, 255f));
         }
-        
-        if (_puntosVidaActuales > 100)
-        {
-            _puntosVidaActuales = 100;
-        }
-        if (_puntosVidaActuales < 0)
-        {
-            Destroy(this.gameObject);   
-        }
-    
-    
-   
-    }
 
+        if (_puntosVidaActuales <= 0)
+        {
+            FindAnyObjectByType<GameManager>().CargarEscena(3);
+        }
+    
+
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Cloud B (26)")
+        if (other.gameObject.name == "Bandera")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu principal");
+            FindFirstObjectByType<GameManager>().CargarEscena(2);
         }
     }
 }
