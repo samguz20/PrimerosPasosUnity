@@ -6,32 +6,32 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int _puntosVidaActuales = 100;
     [SerializeField] private int _puntosVidaMaximo = 100;
     [SerializeField] private UIManager _uiManager;
+    private int _recuperarvida = 10;
     public void RestarVida(int daño)
     {
         _puntosVidaActuales = _puntosVidaActuales - daño;
-        
     }
 
 
-    public void SumarVida(int vida)
+    public void Restaurarvida(int heal)
     {
-     _puntosVidaActuales += vida;
+        _puntosVidaActuales = _puntosVidaActuales + _recuperarvida;
     }
     private void Update()
     {
         if (_puntosVidaActuales >= 80)
         {
-            _uiManager.ColorBarra(new Color(68f, 189f, 68f, 255f));
+            _uiManager.ColorBarra(Color.green);
         }
 
         if (40 <= _puntosVidaActuales && _puntosVidaActuales < 80)
         {
-            _uiManager.ColorBarra(new Color(245f, 73f, 39, 255));
+            _uiManager.ColorBarra(Color.yellow);
         }
 
         if (_puntosVidaActuales < 40)
         {
-            _uiManager.ColorBarra(new Color(189f, 15f, 255f));
+            _uiManager.ColorBarra(Color.red);
         }
 
 
