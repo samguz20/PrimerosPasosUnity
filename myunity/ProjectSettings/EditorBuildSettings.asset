@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/Scenes/PlayerMovement.unity
     guid: 0a851eaa2628fe6418360caddf31a7c0
+  - enabled: 1
+    path: Assets/Main/Scenes/PanelGanaste.unity
+    guid: 3403f2ebbc6ff3243a89a57d6986a473
+  - enabled: 1
+    path: Assets/Main/Scenes/Panel perdiste.unity
+    guid: f678fcda55e323f49826ce8622994366
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

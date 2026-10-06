@@ -3,7 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager: MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private static bool gano = false;
+
+    public void Ganar()
+    {
+        gano = true;
+        SceneManager.LoadScene(0);
+    }
     public void CargarEscena(int scene)
     {
         SceneManager.LoadScene(scene);
@@ -12,7 +18,14 @@ public class GameManager: MonoBehaviour
     {
         Application.Quit();
     }
-    
+    public void ReiniciarElJuego()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ReanudarElJuego()
+    {
+        Time.timeScale = 1;
+    }
     public void PausarElJuego()
     {
         Time.timeScale = 0;

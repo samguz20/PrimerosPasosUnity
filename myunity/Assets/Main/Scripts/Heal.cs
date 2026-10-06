@@ -12,7 +12,7 @@ public class Heal : MonoBehaviour
         {
             if(_puntosVidaActuales <100)
             {
-                _playerStats.Restaurarvida(10);
+                _playerStats.Restaurarvida(5);
                 _uiManager.SumarFillAmount(0.5f);
                 Destroy(this.gameObject);
             }

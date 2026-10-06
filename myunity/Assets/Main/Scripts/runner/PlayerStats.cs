@@ -1,4 +1,5 @@
 
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -34,18 +35,25 @@ public class PlayerStats : MonoBehaviour
             _uiManager.ColorBarra(Color.red);
         }
 
-
-        if (_puntosVidaActuales >100)   
-        {
-            _puntosVidaActuales = 100;
-        }
         if (_puntosVidaActuales <= 0)
         {
-            Destroy(this.gameObject);
+            FindAnyObjectByType<GameManager>().CargarEscena(3);
         }
 
+
+
+
+
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name=="Bandera")
         {
-            Debug.Log("Game Over");
+            FindFirstObjectByType<GameManager>().CargarEscena(2);
         }
     }
+
+
+
+
 }
